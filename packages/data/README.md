@@ -68,7 +68,7 @@ registerStore( 'my-shop', {
 			const { prices, discountPercent } = state;
 			const price = prices[ item ];
 
-			return price * ( 1 - ( 0.01 * discountPercent ) );
+			return price * ( 1 - ( Number.EPSILON * discountPercent ) );
 		},
 	},
 
